@@ -1,4 +1,4 @@
-#Objectives
+# Objectives
 The following are the primary objectives of this exercise:
 
 To learn how to build and execute a Xenomai program which creates and starts a real-time task.
@@ -7,7 +7,7 @@ The exercises are based on Xenomai 3 using the Alchemy API.
 
 The example program below creates and starts a task, see also the task management services of the Alchemy API.
 
-#Creating a task
+# Creating a task
 When you create a real-time task in Xenomai the RT_TASK structure is used as the descriptor to refer to this task.
 An RT_TASK data structure is used to hold all the information about a task:
 the task function to be executed by the real-time task,
@@ -25,7 +25,7 @@ int rt_task_create (RT_TASK *task, const char *name, int stack_size, int priorit
 'mode' is a set of flags which affect the task, for instance:
 T_JOINABLE allows another task to wait on the termination of the new task. This implies that rt_task_join() is actually called for this task to clean up any user-space located resources after its termination.
 
-#Starting a task
+# Starting a task
 A task can be started by calling rt_task_start:
 int rt_task_start (RT_TASK *task, void(*)(void *arg) entry, void *arg)
     
@@ -53,7 +53,7 @@ The strerror function provides a convenient way to stop a program and print the 
       rt_printf("taskOne sent message to taskTwo\n");
   }
 
-#Exercises
+# Exercises
 Exercise 1a.
 Compile and run program ex01a.c as described above, using the files ex01a.c and Makefile.
 
