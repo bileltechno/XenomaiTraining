@@ -6,10 +6,7 @@ One-shote mode is the default when a task is started by the 'rt_task_start' func
 
 ## periodic mode
 * A periodic task is also started by the 'rt_task_start' function, but it made periodic executing the command:<br>
-
-```int rt_task_set_periodic(RT_TASK *task,
-                         RTIME start_time,
-                         RTIME period);```
+`int rt_task_set_periodic(RT_TASK *task, RTIME start_time, RTIME period);`
 
 * 'task' is the descriptor of the affected task. This task is immediately delayed until the first periodic release point is reached. If task is NULL, the current task is set periodic.
     * 'start_time' is the absolute time, expressed in clock ticks ( nanoseconds or jiffies), when the task should begin execution. If 'start_time' is equal to TM_NOW, the current system date is used, and no initial delay takes place.
