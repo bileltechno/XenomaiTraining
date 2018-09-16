@@ -4,7 +4,7 @@ A task can be scheduled in two ways.
 ## one-shot mode
 One-shote mode is the default when a task is started by the 'rt_task_start' function, as introduced in exercise 1.
 
-##periodic mode
+## periodic mode
 A periodic task is also started by the 'rt_task_start' function, but it made periodic executing the command:
 int rt_task_set_periodic(RT_TASK *task,
                          RTIME start_time,
