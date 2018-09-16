@@ -18,7 +18,8 @@ void rt_task_wait_period(NULL);
 
 As an example, consider a task function which executes an infinite loop which typically reads some inputs, computes some outputs and waits for the next period. Typical code looks like this:
 
-```void task_function(void *arg)
+```
+void task_function(void *arg)
 {
   rt_task_set_periodic(NULL, TM_NOW, period_ns);
   while (1) {
@@ -28,4 +29,5 @@ As an example, consider a task function which executes an infinite loop which ty
     rt_task_wait_period(NULL);
   }
   return;
-}```
+}
+```
