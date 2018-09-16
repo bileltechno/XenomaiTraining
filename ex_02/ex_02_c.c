@@ -19,7 +19,7 @@ void demo(void *arg) {
 }
 
 int main(int argc, char* argv[]) {
-    
+
     int taskArg = 5;
     // Create Tasks
     rt_task_create(&task1, "task1", 0, 49, 0);
